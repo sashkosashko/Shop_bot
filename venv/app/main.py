@@ -13,11 +13,8 @@ from app.handlers import user_router
 
 from dotenv import load_dotenv
 
-class Gems(StatesGroup):
-    gems = State()
-
 async def main():
-    db_session.global_init("database/my_base.db")
+    db_session.global_init("venv/database/my_base.db")
 
     load_dotenv()
     bot = Bot(os.getenv("TOKEN"))

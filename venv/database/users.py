@@ -6,5 +6,5 @@ from .db_session import SqlAlchemyBase
 class User(SqlAlchemyBase):
     __tablename__= "users"
 
-    uid = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
-    tg_id = sqlalchemy.Column(sqlalchemy.Integer)
+    uid = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True)
+    count_of_orders = sqlalchemy.Column(sqlalchemy.Integer)
