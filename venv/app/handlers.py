@@ -10,6 +10,7 @@ from database.categories import Category
 from database.items import Item
 
 import app.keyboards as kb
+import app.builders as br
 
 user_router = Router()
 
@@ -36,12 +37,13 @@ async def start(message: Message):
     session.commit()
     session.close()
 
-@user_router.message(F.text == "Главное меню")
-async def menu(message: Message):
+@user_router.callback_query(F.data == "main_menu")
+async def menu(callback: CallbackQuery):
     photo = FSInputFile("venv/images_dir/start.png")
-    await message.reply_photo(photo=photo,
+    await callback.message.answer_photo(photo=photo,
                         caption="Вы в главном меню!",
                         reply_markup=kb.main_menu)
+    await callback.answer()
 
 @user_router.callback_query(F.data == "feedbacks")
 async def callbacks(callback: CallbackQuery):
@@ -50,7 +52,7 @@ async def callbacks(callback: CallbackQuery):
 
 @user_router.callback_query(F.data == "catalog")
 async def catalog(callback: CallbackQuery):
-    await callback.message.answer("Выберите желаемый товар", reply_markup=await kb.inline_products())
+    await callback.message.answer("Выберите желаемую категорию товаров:", reply_markup=await br.inline_categories())
     await callback.answer()
 
 @user_router.callback_query(F.data == "profile")
@@ -66,6 +68,3 @@ async def profile(callback: CallbackQuery):
                                     reply_markup=kb.profile_menu)
     await callback.answer()
     session.close()
-
-async def inline_products():
-    pass

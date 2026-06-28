@@ -8,4 +8,3 @@ class Category(SqlAlchemyBase):
 
     cid = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
     name = sqlalchemy.Column(sqlalchemy.String)
-    photo_id = sqlalchemy.Column(sqlalchemy.String)
