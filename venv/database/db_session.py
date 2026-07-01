@@ -16,7 +16,7 @@ def global_init(db_file):
     if not db_file or not db_file.strip():
         raise Exception("Необходимо указать файл базы данных.")
 
-    engine = sa.create_engine(conn_str, echo=False)
+    engine = sa.create_async_engine(conn_str, echo=True)
     __factory = orm.sessionmaker(bind=engine)
 
     from . import __all_models
