@@ -2,6 +2,7 @@ from aiogram import F, Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message, CallbackQuery, FSInputFile, InputMediaPhoto
 from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import StatesGroup, State
 
 from database import db_session
 from database.users import User
@@ -13,6 +14,10 @@ import app.keyboards as kb
 import app.builders as br
 
 user_router = Router()
+
+class Order(StatesGroup):
+    category = State()
+    item = State()
 
 @user_router.message(CommandStart())
 async def start(message: Message):
@@ -68,3 +73,14 @@ async def profile(callback: CallbackQuery):
                                     reply_markup=kb.profile_menu)
     await callback.answer()
     session.close()
+
+@user_router.callback_query(lambda call: "category" in call.data)
+async def selected_category(callback: CallbackQuery, state: FSMContext):
+    await state.set_state(Order.category)
+    session = db_session.create_session()
+    category_id = int(callback.data.split("category")[1])
+    category_name = session.query(Category).filter(Category.cid == category_id).first().name
+    
+    await state.update_data(category_id=category_id)
+    await callback.message.answer(f"Выберите товар из выбранной вами категории: {category_name}", reply_markup=await br.inline_items(category_id))
+    await callback.answer()

@@ -4,14 +4,10 @@ import os
 from database import db_session
 
 from aiogram import Bot, Dispatcher
-from aiogram.filters import CommandStart
-from aiogram.types import CallbackQuery, FSInputFile, InputMediaPhoto
-from aiogram.fsm.state import StatesGroup, State
-from aiogram.fsm.context import FSMContext
-
-from app.handlers import user_router
 
 from dotenv import load_dotenv
+
+from app.handlers.user_handlers import user_router
 
 async def main():
     db_session.global_init("venv/database/my_base.db")
@@ -22,6 +18,7 @@ async def main():
     dp = Dispatcher()
     dp.include_router(user_router)
 
+    await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
