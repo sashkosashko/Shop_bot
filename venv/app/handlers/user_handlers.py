@@ -16,8 +16,7 @@ import app.builders as br
 user_router = Router()
 
 class Order(StatesGroup):
-    category = State()
-    item = State()
+    selected_item = State()
 
 @user_router.message(CommandStart())
 async def start(message: Message):
@@ -76,11 +75,29 @@ async def profile(callback: CallbackQuery):
 
 @user_router.callback_query(lambda call: "category" in call.data)
 async def selected_category(callback: CallbackQuery, state: FSMContext):
-    await state.set_state(Order.category)
+    await state.set_state(Order.selected_item)
     session = db_session.create_session()
     category_id = int(callback.data.split("category")[1])
     category_name = session.query(Category).filter(Category.cid == category_id).first().name
     
-    await state.update_data(category_id=category_id)
+    await state.update_data(category_id=category_id, category_name=category_name)
     await callback.message.answer(f"Выберите товар из выбранной вами категории: {category_name}", reply_markup=await br.inline_items(category_id))
+    await callback.answer()
+
+@user_router.callback_query(lambda call: "item" in call.data)
+async def selected_item(callback: CallbackQuery, state: FSMContext):
+    session = db_session.create_session()
+
+    item_id = int(callback.data.split("item")[1])
+
+    item = session.query(Item).filter(Item.iid == item_id).first()
+    item_name = item.name
+    item_price = item.price
+
+    item_data = await state.get_data()
+    category_name = item_data.get("category_name")
+
+    await state.update_data(item_id=item_id)
+    await callback.message.answer(f"Вы выбрали:\nКатегория: {category_name}\nТовар: {item_name}\nСтоимость: {item_price}₽\nКоличество:", 
+                                    reply_markup=kb.selected_item)
     await callback.answer()

@@ -1,11 +1,27 @@
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton, KeyboardButton
 
 to_menu = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text="Главное меню")]], resize_keyboard=True)
+
 main_menu = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="Каталог📃", callback_data="catalog")], 
-    [InlineKeyboardButton(text="Корзина🛒", callback_data="feedbacks")],
+
+    [InlineKeyboardButton(text="Корзина🛒", callback_data="basket")],
+
     [InlineKeyboardButton(text="Профиль😎", callback_data="profile")],
+
     [InlineKeyboardButton(text="Отзывы🖊", callback_data="feedbacks")]])
+
+
 profile_menu = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="История заказов🛒", callback_data="history_od_orders")], 
+
     [InlineKeyboardButton(text="В главное меню📃", callback_data="main_menu")]])
+
+
+selected_item = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="Увеличить количество⬆", callback_data="plus_amount"), 
+    InlineKeyboardButton(text="Уменьшить количество⬇", callback_data="minus_amount")],
+
+    [InlineKeyboardButton(text="Купить🎁", callback_data="buy_item")],
+
+    [InlineKeyboardButton(text="Положить в корзину🛒", callback_data="put_into_basket")]])
