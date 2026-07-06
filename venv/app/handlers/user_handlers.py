@@ -98,7 +98,8 @@ async def menu(callback: CallbackQuery, state: FSMContext):
 @user_router.callback_query(F.data == "feedbacks")
 async def callbacks(callback: CallbackQuery):
     logger.info("Пользователь %s нажал кнопку отзывов", callback.from_user.id)
-    await callback.message.answer("{Ваша ссылка на отзывы}")
+    await callback.message.delete()
+    await callback.message.answer("Пожалуйста, оставьте отзыв)", reply_markup=kb.feedbacks)
     await callback.answer()
 
 
@@ -153,37 +154,52 @@ async def catalog(callback: CallbackQuery):
 
 @user_router.callback_query(lambda call: "category" in call.data)
 async def selected_category(callback: CallbackQuery, state: FSMContext):
-    await state.set_state(OrderStates.selected_item)
     session = db_session.create_session()
     user_id = callback.from_user.id
 
     try:
-        category_id = int(callback.data.split("category")[1])
-        logger.info("Пользователь %s выбрал ID категории: %s", user_id, category_id)
+
+        category_id = callback.data.split("category")[1]
+        if category_id:
+            category_id = int(category_id)
+            await state.set_state(OrderStates.selected_item)
+            logger.info("Пользователь %s выбрал ID категории: %s", user_id, category_id)
         
-        category = (
-            session.query(Category).filter(Category.cid == category_id).first()
-        )
+            category = session.query(Category).filter(Category.cid == category_id).first()
 
-        if not category:
-            logger.warning("Пользователь %s выбрал несуществующую категорию %s", user_id, category_id)
-            await callback.answer("Категория не найдена.", show_alert=True)
-            return
+            if not category:
+                logger.warning("Пользователь %s выбрал несуществующую категорию %s", user_id, category_id)
+                await callback.answer("Категория не найдена.", show_alert=True)
+                return
 
-        category_name = category.name
-        await state.update_data(
-            category_id=category_id, category_name=category_name
-        )
+            category_name = category.name
+            await state.update_data(category_id=category_id, category_name=category_name)
 
-        try:
-            await callback.message.delete()
-        except Exception as e:
-            logger.warning("Не удалось удалить сообщение в категории для %s: %s", user_id, e)
+            try:
+                await callback.message.delete()
+            except Exception as e:
+                logger.warning("Не удалось удалить сообщение в категории для %s: %s", user_id, e)
 
-        await callback.message.answer(
-            f"Выберите товар из выбранной вами категории: {category_name}",
-            reply_markup=await br.inline_items(category_id),
-        )
+        
+        else:
+            logger.info("Пользователь %s вернулся из карточки товара к другим товарам: %s", user_id, category_id)
+            category = await state.get_data()
+
+            if not category:
+                logger.warning("Пользователь %s выбрал несуществующую категорию %s", user_id, category_id)
+                await callback.answer("Категория не найдена.", show_alert=True)
+                return
+
+            category_name = category.get("category_name")
+            category_id = category.get("category_id")
+
+            try:
+                await callback.message.delete()
+            except Exception as e:
+                logger.warning("Не удалось удалить сообщение в категории для %s: %s", user_id, e)
+
+        await callback.message.answer(f"Выберите товар из выбранной вами категории: {category_name}", reply_markup=await br.inline_items(category_id))
+
     except (IndexError, ValueError) as e:
         logger.error("Ошибка парсинга категории из callback.data (%s) пользователем %s: %s", callback.data, user_id, e)
         await callback.answer("Ошибка при выборе категории.", show_alert=True)

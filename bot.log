@@ -1,0 +1,527 @@
+2026-07-06 18:06:37,348 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:06:37,427 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:06:46,192 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:06:46,195 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:06:46,197 - sqlalchemy.engine.Engine - INFO - SELECT users.uid AS users_uid, users.count_of_orders AS users_count_of_orders 
+FROM users 
+WHERE users.uid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:06:46,197 - sqlalchemy.engine.Engine - INFO - [generated in 0.00037s] (1547682916, 1, 0)
+2026-07-06 18:06:46,198 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:06:46,541 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:06:46,541 - aiogram.event - INFO - Update id=521452544 is handled. Duration 355 ms by bot id=8729090210
+2026-07-06 18:07:11,751 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запросил профиль
+2026-07-06 18:07:11,751 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:07:11,752 - sqlalchemy.engine.Engine - INFO - SELECT users.uid AS users_uid, users.count_of_orders AS users_count_of_orders 
+FROM users 
+WHERE users.uid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:07:11,752 - sqlalchemy.engine.Engine - INFO - [cached since 25.56s ago] (1547682916, 1, 0)
+2026-07-06 18:07:12,027 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:07:12,028 - aiogram.event - INFO - Update id=521452545 is handled. Duration 277 ms by bot id=8729090210
+2026-07-06 18:07:37,928 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-06 18:07:38,221 - aiogram.event - INFO - Update id=521452546 is handled. Duration 292 ms by bot id=8729090210
+2026-07-06 18:07:41,870 - app.handlers.user_handlers - INFO - Пользователь 1547682916 нажал кнопку отзывов
+2026-07-06 18:07:42,167 - aiogram.event - INFO - Update id=521452547 is handled. Duration 298 ms by bot id=8729090210
+2026-07-06 18:18:35,496 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:18:35,564 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:18:36,827 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:18:36,829 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:18:36,832 - sqlalchemy.engine.Engine - INFO - SELECT users.uid AS users_uid, users.count_of_orders AS users_count_of_orders 
+FROM users 
+WHERE users.uid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:18:36,833 - sqlalchemy.engine.Engine - INFO - [generated in 0.00037s] (1547682916, 1, 0)
+2026-07-06 18:18:36,834 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:18:37,187 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:18:37,187 - aiogram.event - INFO - Update id=521452548 is handled. Duration 360 ms by bot id=8729090210
+2026-07-06 18:18:48,632 - app.handlers.user_handlers - INFO - Пользователь 1547682916 нажал кнопку отзывов
+2026-07-06 18:18:48,812 - aiogram.event - INFO - Update id=521452549 is handled. Duration 180 ms by bot id=8729090210
+2026-07-06 18:19:45,685 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:19:45,755 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:19:48,317 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:19:48,319 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:19:48,322 - sqlalchemy.engine.Engine - INFO - SELECT users.uid AS users_uid, users.count_of_orders AS users_count_of_orders 
+FROM users 
+WHERE users.uid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:19:48,323 - sqlalchemy.engine.Engine - INFO - [generated in 0.00060s] (1547682916, 1, 0)
+2026-07-06 18:19:48,324 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:19:48,674 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:19:48,674 - aiogram.event - INFO - Update id=521452551 is handled. Duration 357 ms by bot id=8729090210
+2026-07-06 18:19:49,642 - app.handlers.user_handlers - INFO - Пользователь 1547682916 нажал кнопку отзывов
+2026-07-06 18:19:49,648 - aiogram.event - INFO - Update id=521452552 is not handled. Duration 6 ms by bot id=8729090210
+2026-07-06 18:19:49,648 - aiogram.event - ERROR - Cause exception while process update id=521452552 by bot id=8729090210
+AttributeError: module 'app.keyboards' has no attribute 'feedbacks'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 193, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 185, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\app\handlers\user_handlers.py", line 101, in callbacks
+    await callback.message.answer("Пожалуйста, оставьте отзыв)", reply_markup=kb.feedbacks)
+                                                                              ^^^^^^^^^^^^
+AttributeError: module 'app.keyboards' has no attribute 'feedbacks'
+2026-07-06 18:20:52,423 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:20:52,491 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:20:56,084 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:20:56,086 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:20:56,089 - sqlalchemy.engine.Engine - INFO - SELECT users.uid AS users_uid, users.count_of_orders AS users_count_of_orders 
+FROM users 
+WHERE users.uid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:20:56,089 - sqlalchemy.engine.Engine - INFO - [generated in 0.00037s] (1547682916, 1, 0)
+2026-07-06 18:20:56,090 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:20:56,437 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:20:56,437 - aiogram.event - INFO - Update id=521452555 is handled. Duration 353 ms by bot id=8729090210
+2026-07-06 18:20:57,783 - app.handlers.user_handlers - INFO - Пользователь 1547682916 нажал кнопку отзывов
+2026-07-06 18:20:57,948 - aiogram.event - INFO - Update id=521452556 is handled. Duration 165 ms by bot id=8729090210
+2026-07-06 18:21:08,141 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-06 18:21:08,409 - aiogram.event - INFO - Update id=521452557 is handled. Duration 267 ms by bot id=8729090210
+2026-07-06 18:23:16,069 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:23:16,141 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:23:17,793 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:23:17,796 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:17,798 - sqlalchemy.engine.Engine - INFO - SELECT users.uid AS users_uid, users.count_of_orders AS users_count_of_orders 
+FROM users 
+WHERE users.uid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:17,798 - sqlalchemy.engine.Engine - INFO - [generated in 0.00030s] (1547682916, 1, 0)
+2026-07-06 18:23:17,799 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:23:18,132 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:18,133 - aiogram.event - INFO - Update id=521452558 is handled. Duration 339 ms by bot id=8729090210
+2026-07-06 18:23:22,234 - app.handlers.user_handlers - INFO - Пользователь 1547682916 нажал кнопку отзывов
+2026-07-06 18:23:22,488 - aiogram.event - INFO - Update id=521452559 is handled. Duration 253 ms by bot id=8729090210
+2026-07-06 18:23:25,309 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-06 18:23:25,566 - aiogram.event - INFO - Update id=521452560 is handled. Duration 257 ms by bot id=8729090210
+2026-07-06 18:23:27,028 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:23:27,115 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:27,116 - sqlalchemy.engine.Engine - INFO - SELECT categories.cid AS categories_cid, categories.name AS categories_name 
+FROM categories
+2026-07-06 18:23:27,116 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] ()
+2026-07-06 18:23:27,292 - aiogram.event - INFO - Update id=521452561 is handled. Duration 264 ms by bot id=8729090210
+2026-07-06 18:23:28,647 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал ID категории: 1
+2026-07-06 18:23:28,648 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:28,649 - sqlalchemy.engine.Engine - INFO - SELECT categories.cid AS categories_cid, categories.name AS categories_name 
+FROM categories 
+WHERE categories.cid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:28,649 - sqlalchemy.engine.Engine - INFO - [generated in 0.00030s] (1, 1, 0)
+2026-07-06 18:23:28,775 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:28,776 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.category = ?
+2026-07-06 18:23:28,776 - sqlalchemy.engine.Engine - INFO - [generated in 0.00025s] (1,)
+2026-07-06 18:23:29,008 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:29,009 - aiogram.event - INFO - Update id=521452562 is handled. Duration 362 ms by bot id=8729090210
+2026-07-06 18:23:30,134 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал товар ID: 1
+2026-07-06 18:23:30,135 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:30,136 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:30,136 - sqlalchemy.engine.Engine - INFO - [generated in 0.00025s] (1, 1, 0)
+2026-07-06 18:23:30,315 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:30,315 - aiogram.event - INFO - Update id=521452563 is handled. Duration 182 ms by bot id=8729090210
+2026-07-06 18:23:31,520 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 1)
+2026-07-06 18:23:31,521 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:31,521 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:31,521 - sqlalchemy.engine.Engine - INFO - [cached since 1.386s ago] (1, 1, 0)
+2026-07-06 18:23:31,767 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:31,768 - aiogram.event - INFO - Update id=521452564 is handled. Duration 248 ms by bot id=8729090210
+2026-07-06 18:23:32,079 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 2)
+2026-07-06 18:23:32,079 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:32,080 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:32,080 - sqlalchemy.engine.Engine - INFO - [cached since 1.944s ago] (1, 1, 0)
+2026-07-06 18:23:32,250 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:32,251 - aiogram.event - INFO - Update id=521452565 is handled. Duration 172 ms by bot id=8729090210
+2026-07-06 18:23:32,630 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 3)
+2026-07-06 18:23:32,631 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:32,631 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:32,631 - sqlalchemy.engine.Engine - INFO - [cached since 2.496s ago] (1, 1, 0)
+2026-07-06 18:23:32,863 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:32,863 - aiogram.event - INFO - Update id=521452566 is handled. Duration 233 ms by bot id=8729090210
+2026-07-06 18:23:36,350 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 2)
+2026-07-06 18:23:36,350 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:36,351 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:36,351 - sqlalchemy.engine.Engine - INFO - [cached since 6.215s ago] (1, 1, 0)
+2026-07-06 18:23:36,766 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:36,766 - aiogram.event - INFO - Update id=521452567 is handled. Duration 417 ms by bot id=8729090210
+2026-07-06 18:23:36,885 - app.handlers.user_handlers - WARNING - Пользователь 1547682916 попытался опустить количество ниже 1
+2026-07-06 18:23:37,040 - aiogram.event - INFO - Update id=521452568 is handled. Duration 155 ms by bot id=8729090210
+2026-07-06 18:23:39,109 - app.handlers.user_handlers - WARNING - Пользователь 1547682916 попытался опустить количество ниже 1
+2026-07-06 18:23:39,186 - aiogram.event - INFO - Update id=521452569 is handled. Duration 78 ms by bot id=8729090210
+2026-07-06 18:23:45,842 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 1)
+2026-07-06 18:23:45,842 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:45,843 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:45,843 - sqlalchemy.engine.Engine - INFO - [cached since 15.71s ago] (1, 1, 0)
+2026-07-06 18:23:46,015 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:46,015 - aiogram.event - INFO - Update id=521452570 is handled. Duration 174 ms by bot id=8729090210
+2026-07-06 18:23:46,487 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 2)
+2026-07-06 18:23:46,488 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:46,488 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:46,488 - sqlalchemy.engine.Engine - INFO - [cached since 16.35s ago] (1, 1, 0)
+2026-07-06 18:23:46,722 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:46,723 - aiogram.event - INFO - Update id=521452571 is handled. Duration 236 ms by bot id=8729090210
+2026-07-06 18:23:47,091 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 3)
+2026-07-06 18:23:47,092 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:47,092 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:47,092 - sqlalchemy.engine.Engine - INFO - [cached since 16.96s ago] (1, 1, 0)
+2026-07-06 18:23:47,271 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:47,272 - aiogram.event - INFO - Update id=521452572 is handled. Duration 181 ms by bot id=8729090210
+2026-07-06 18:23:47,644 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 4)
+2026-07-06 18:23:47,645 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:47,645 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:47,645 - sqlalchemy.engine.Engine - INFO - [cached since 17.51s ago] (1, 1, 0)
+2026-07-06 18:23:47,831 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:47,831 - aiogram.event - INFO - Update id=521452573 is handled. Duration 187 ms by bot id=8729090210
+2026-07-06 18:23:48,236 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 5)
+2026-07-06 18:23:48,236 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:48,237 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:48,237 - sqlalchemy.engine.Engine - INFO - [cached since 18.1s ago] (1, 1, 0)
+2026-07-06 18:23:48,403 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:48,403 - aiogram.event - INFO - Update id=521452574 is handled. Duration 168 ms by bot id=8729090210
+2026-07-06 18:23:51,958 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 6)
+2026-07-06 18:23:51,959 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:51,959 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:51,959 - sqlalchemy.engine.Engine - INFO - [cached since 21.82s ago] (1, 1, 0)
+2026-07-06 18:23:52,193 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:52,193 - aiogram.event - INFO - Update id=521452575 is handled. Duration 236 ms by bot id=8729090210
+2026-07-06 18:23:52,885 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 7)
+2026-07-06 18:23:52,886 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:52,886 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:52,886 - sqlalchemy.engine.Engine - INFO - [cached since 22.75s ago] (1, 1, 0)
+2026-07-06 18:23:53,064 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:53,064 - aiogram.event - INFO - Update id=521452576 is handled. Duration 180 ms by bot id=8729090210
+2026-07-06 18:23:53,732 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 8)
+2026-07-06 18:23:53,733 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:53,733 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:53,733 - sqlalchemy.engine.Engine - INFO - [cached since 23.6s ago] (1, 1, 0)
+2026-07-06 18:23:53,982 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:53,983 - aiogram.event - INFO - Update id=521452577 is handled. Duration 251 ms by bot id=8729090210
+2026-07-06 18:23:54,635 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 9)
+2026-07-06 18:23:54,635 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:54,636 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:54,636 - sqlalchemy.engine.Engine - INFO - [cached since 24.5s ago] (1, 1, 0)
+2026-07-06 18:23:54,935 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:54,936 - aiogram.event - INFO - Update id=521452578 is handled. Duration 302 ms by bot id=8729090210
+2026-07-06 18:23:55,490 - app.handlers.user_handlers - INFO - Пользователь 1547682916 увеличивает количество (было: 10)
+2026-07-06 18:23:55,491 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:55,491 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:55,491 - sqlalchemy.engine.Engine - INFO - [cached since 25.36s ago] (1, 1, 0)
+2026-07-06 18:23:55,836 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:55,836 - aiogram.event - INFO - Update id=521452579 is handled. Duration 346 ms by bot id=8729090210
+2026-07-06 18:23:57,364 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 11)
+2026-07-06 18:23:57,365 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:57,365 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:57,366 - sqlalchemy.engine.Engine - INFO - [cached since 27.23s ago] (1, 1, 0)
+2026-07-06 18:23:57,538 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:57,538 - aiogram.event - INFO - Update id=521452580 is handled. Duration 174 ms by bot id=8729090210
+2026-07-06 18:23:57,938 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 10)
+2026-07-06 18:23:57,938 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:57,939 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:57,939 - sqlalchemy.engine.Engine - INFO - [cached since 27.8s ago] (1, 1, 0)
+2026-07-06 18:23:58,479 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:58,479 - aiogram.event - INFO - Update id=521452581 is handled. Duration 542 ms by bot id=8729090210
+2026-07-06 18:23:58,934 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 9)
+2026-07-06 18:23:58,934 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:58,935 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:58,935 - sqlalchemy.engine.Engine - INFO - [cached since 28.8s ago] (1, 1, 0)
+2026-07-06 18:23:59,102 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:59,102 - aiogram.event - INFO - Update id=521452582 is handled. Duration 169 ms by bot id=8729090210
+2026-07-06 18:23:59,569 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 8)
+2026-07-06 18:23:59,569 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:23:59,569 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:23:59,570 - sqlalchemy.engine.Engine - INFO - [cached since 29.43s ago] (1, 1, 0)
+2026-07-06 18:23:59,745 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:23:59,745 - aiogram.event - INFO - Update id=521452583 is handled. Duration 178 ms by bot id=8729090210
+2026-07-06 18:24:00,219 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 7)
+2026-07-06 18:24:00,220 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:24:00,220 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:24:00,221 - sqlalchemy.engine.Engine - INFO - [cached since 30.09s ago] (1, 1, 0)
+2026-07-06 18:24:00,389 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:24:00,389 - aiogram.event - INFO - Update id=521452584 is handled. Duration 171 ms by bot id=8729090210
+2026-07-06 18:24:04,004 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 6)
+2026-07-06 18:24:04,005 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:24:04,005 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:24:04,005 - sqlalchemy.engine.Engine - INFO - [cached since 33.87s ago] (1, 1, 0)
+2026-07-06 18:24:04,175 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:24:04,175 - aiogram.event - INFO - Update id=521452585 is handled. Duration 172 ms by bot id=8729090210
+2026-07-06 18:24:04,754 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 5)
+2026-07-06 18:24:04,755 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:24:04,755 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:24:04,756 - sqlalchemy.engine.Engine - INFO - [cached since 34.62s ago] (1, 1, 0)
+2026-07-06 18:24:04,923 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:24:04,923 - aiogram.event - INFO - Update id=521452586 is handled. Duration 169 ms by bot id=8729090210
+2026-07-06 18:24:05,396 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 4)
+2026-07-06 18:24:05,396 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:24:05,397 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:24:05,397 - sqlalchemy.engine.Engine - INFO - [cached since 35.26s ago] (1, 1, 0)
+2026-07-06 18:24:05,650 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:24:05,651 - aiogram.event - INFO - Update id=521452587 is handled. Duration 256 ms by bot id=8729090210
+2026-07-06 18:24:06,188 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 3)
+2026-07-06 18:24:06,188 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:24:06,189 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:24:06,189 - sqlalchemy.engine.Engine - INFO - [cached since 36.05s ago] (1, 1, 0)
+2026-07-06 18:24:06,362 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:24:06,362 - aiogram.event - INFO - Update id=521452588 is handled. Duration 176 ms by bot id=8729090210
+2026-07-06 18:24:06,825 - app.handlers.user_handlers - INFO - Пользователь 1547682916 уменьшает количество (было: 2)
+2026-07-06 18:24:06,825 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:24:06,826 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:24:06,826 - sqlalchemy.engine.Engine - INFO - [cached since 36.69s ago] (1, 1, 0)
+2026-07-06 18:24:06,994 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:24:06,994 - aiogram.event - INFO - Update id=521452589 is handled. Duration 170 ms by bot id=8729090210
+2026-07-06 18:39:59,569 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:39:59,643 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:40:00,153 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:40:00,156 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:40:00,160 - sqlalchemy.engine.Engine - INFO - SELECT users.uid AS users_uid, users.count_of_orders AS users_count_of_orders 
+FROM users 
+WHERE users.uid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:40:00,161 - sqlalchemy.engine.Engine - INFO - [generated in 0.00047s] (1547682916, 1, 0)
+2026-07-06 18:40:00,162 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:40:00,498 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:40:00,498 - aiogram.event - INFO - Update id=521452590 is handled. Duration 345 ms by bot id=8729090210
+2026-07-06 18:40:01,685 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:40:01,817 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:40:01,818 - sqlalchemy.engine.Engine - INFO - SELECT categories.cid AS categories_cid, categories.name AS categories_name 
+FROM categories
+2026-07-06 18:40:01,818 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] ()
+2026-07-06 18:40:02,010 - aiogram.event - INFO - Update id=521452591 is handled. Duration 326 ms by bot id=8729090210
+2026-07-06 18:40:02,791 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал ID категории: 1
+2026-07-06 18:40:02,792 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:40:02,793 - sqlalchemy.engine.Engine - INFO - SELECT categories.cid AS categories_cid, categories.name AS categories_name 
+FROM categories 
+WHERE categories.cid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:40:02,793 - sqlalchemy.engine.Engine - INFO - [generated in 0.00035s] (1, 1, 0)
+2026-07-06 18:40:02,873 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:40:02,874 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.category = ?
+2026-07-06 18:40:02,874 - sqlalchemy.engine.Engine - INFO - [generated in 0.00033s] (1,)
+2026-07-06 18:40:03,051 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:40:03,051 - aiogram.event - INFO - Update id=521452592 is handled. Duration 261 ms by bot id=8729090210
+2026-07-06 18:40:03,667 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал товар ID: 1
+2026-07-06 18:40:03,668 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2026-07-06 18:40:03,669 - sqlalchemy.engine.Engine - INFO - SELECT items.iid AS items_iid, items.name AS items_name, items."desc" AS items_desc, items.price AS items_price, items.category AS items_category, items.photo_id AS items_photo_id 
+FROM items 
+WHERE items.iid = ?
+ LIMIT ? OFFSET ?
+2026-07-06 18:40:03,669 - sqlalchemy.engine.Engine - INFO - [generated in 0.00028s] (1, 1, 0)
+2026-07-06 18:40:03,861 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2026-07-06 18:40:03,862 - aiogram.event - INFO - Update id=521452593 is handled. Duration 195 ms by bot id=8729090210
+2026-07-06 18:40:06,838 - app.handlers.user_handlers - ERROR - Ошибка парсинга категории из callback.data (category) пользователем 1547682916: invalid literal for int() with base 10: ''
+2026-07-06 18:40:06,996 - aiogram.event - INFO - Update id=521452594 is handled. Duration 159 ms by bot id=8729090210
+2026-07-06 18:42:00,246 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:42:00,320 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:42:01,855 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:42:01,861 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:42:02,250 - aiogram.event - INFO - Update id=521452595 is handled. Duration 394 ms by bot id=8729090210
+2026-07-06 18:42:07,804 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:42:08,095 - aiogram.event - INFO - Update id=521452596 is handled. Duration 292 ms by bot id=8729090210
+2026-07-06 18:42:09,063 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал ID категории: 1
+2026-07-06 18:42:09,312 - aiogram.event - INFO - Update id=521452597 is handled. Duration 250 ms by bot id=8729090210
+2026-07-06 18:42:10,181 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал товар ID: 1
+2026-07-06 18:42:10,416 - aiogram.event - INFO - Update id=521452598 is handled. Duration 235 ms by bot id=8729090210
+2026-07-06 18:42:12,374 - app.handlers.user_handlers - ERROR - Ошибка парсинга категории из callback.data (category) пользователем 1547682916: invalid literal for int() with base 10: ''
+2026-07-06 18:42:12,550 - aiogram.event - INFO - Update id=521452599 is handled. Duration 176 ms by bot id=8729090210
+2026-07-06 18:43:06,724 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:43:06,800 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:43:18,086 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:43:18,091 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:43:18,405 - aiogram.event - INFO - Update id=521452601 is handled. Duration 319 ms by bot id=8729090210
+2026-07-06 18:43:19,455 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:43:19,709 - aiogram.event - INFO - Update id=521452602 is handled. Duration 254 ms by bot id=8729090210
+2026-07-06 18:43:20,311 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал ID категории: 1
+2026-07-06 18:43:20,555 - aiogram.event - INFO - Update id=521452603 is handled. Duration 245 ms by bot id=8729090210
+2026-07-06 18:43:21,086 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал товар ID: 1
+2026-07-06 18:43:21,268 - aiogram.event - INFO - Update id=521452604 is handled. Duration 183 ms by bot id=8729090210
+2026-07-06 18:43:23,476 - app.handlers.user_handlers - ERROR - Ошибка парсинга категории из callback.data (category) пользователем 1547682916: invalid literal for int() with base 10: ''
+2026-07-06 18:43:23,625 - aiogram.event - INFO - Update id=521452605 is handled. Duration 150 ms by bot id=8729090210
+2026-07-06 18:44:17,453 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:44:17,525 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:44:19,121 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-06 18:44:19,738 - aiogram.event - INFO - Update id=521452606 is handled. Duration 617 ms by bot id=8729090210
+2026-07-06 18:44:20,670 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:44:21,042 - aiogram.event - INFO - Update id=521452607 is handled. Duration 373 ms by bot id=8729090210
+2026-07-06 18:44:21,869 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал ID категории: 1
+2026-07-06 18:44:22,157 - aiogram.event - INFO - Update id=521452608 is handled. Duration 289 ms by bot id=8729090210
+2026-07-06 18:44:22,967 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал товар ID: 1
+2026-07-06 18:44:23,212 - aiogram.event - INFO - Update id=521452609 is handled. Duration 246 ms by bot id=8729090210
+2026-07-06 18:44:28,443 - app.handlers.user_handlers - ERROR - Ошибка парсинга категории из callback.data (category) пользователем 1547682916: invalid literal for int() with base 10: ''
+2026-07-06 18:44:29,484 - aiogram.event - INFO - Update id=521452610 is handled. Duration 1042 ms by bot id=8729090210
+2026-07-06 18:49:53,059 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:49:53,131 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:50:01,900 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:50:01,906 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:50:02,238 - aiogram.event - INFO - Update id=521452612 is handled. Duration 337 ms by bot id=8729090210
+2026-07-06 18:50:03,459 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:50:03,740 - aiogram.event - INFO - Update id=521452613 is handled. Duration 281 ms by bot id=8729090210
+2026-07-06 18:50:04,585 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал ID категории: 1
+2026-07-06 18:50:04,845 - aiogram.event - INFO - Update id=521452614 is handled. Duration 261 ms by bot id=8729090210
+2026-07-06 18:50:05,741 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал товар ID: 1
+2026-07-06 18:50:05,916 - aiogram.event - INFO - Update id=521452615 is handled. Duration 176 ms by bot id=8729090210
+2026-07-06 18:50:08,420 - app.handlers.user_handlers - INFO - Пользователь 1547682916 вернулся из карточки товара к другим товарам: 
+2026-07-06 18:50:08,420 - app.handlers.user_handlers - ERROR - Непредвиденная ошибка в selected_category для 1547682916: 'dict' object has no attribute 'name'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\shop_bot\venv\app\handlers\user_handlers.py", line 187, in selected_category
+    category_name = category.name
+                    ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'name'
+2026-07-06 18:50:08,577 - aiogram.event - INFO - Update id=521452616 is handled. Duration 158 ms by bot id=8729090210
+2026-07-06 18:51:18,695 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:51:18,767 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:51:18,908 - app.handlers.user_handlers - INFO - Пользователь 1547682916 вернулся из карточки товара к другим товарам: 
+2026-07-06 18:51:19,232 - aiogram.event - INFO - Update id=521452617 is handled. Duration 324 ms by bot id=8729090210
+2026-07-06 18:52:29,677 - aiogram.dispatcher - INFO - Start polling
+2026-07-06 18:52:29,745 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-06 18:52:33,160 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-06 18:52:33,166 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-06 18:52:33,499 - aiogram.event - INFO - Update id=521452618 is handled. Duration 339 ms by bot id=8729090210
+2026-07-06 18:52:34,797 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:52:35,054 - aiogram.event - INFO - Update id=521452619 is handled. Duration 258 ms by bot id=8729090210
+2026-07-06 18:52:35,960 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал ID категории: 1
+2026-07-06 18:52:36,222 - aiogram.event - INFO - Update id=521452620 is handled. Duration 263 ms by bot id=8729090210
+2026-07-06 18:52:36,812 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал товар ID: 1
+2026-07-06 18:52:36,988 - aiogram.event - INFO - Update id=521452621 is handled. Duration 176 ms by bot id=8729090210
+2026-07-06 18:52:37,685 - app.handlers.user_handlers - INFO - Пользователь 1547682916 вернулся из карточки товара к другим товарам: 
+2026-07-06 18:52:37,948 - aiogram.event - INFO - Update id=521452622 is handled. Duration 263 ms by bot id=8729090210
+2026-07-06 18:52:41,594 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал товар ID: 4
+2026-07-06 18:52:41,773 - aiogram.event - INFO - Update id=521452623 is handled. Duration 179 ms by bot id=8729090210
+2026-07-06 18:52:44,457 - app.handlers.user_handlers - INFO - Пользователь 1547682916 вернулся из карточки товара к другим товарам: 
+2026-07-06 18:52:44,719 - aiogram.event - INFO - Update id=521452624 is handled. Duration 263 ms by bot id=8729090210
+2026-07-06 18:52:49,972 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:52:50,216 - aiogram.event - INFO - Update id=521452625 is handled. Duration 245 ms by bot id=8729090210
+2026-07-06 18:52:52,829 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-06 18:52:53,097 - aiogram.event - INFO - Update id=521452626 is handled. Duration 269 ms by bot id=8729090210
+2026-07-06 18:52:54,160 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-06 18:52:54,403 - aiogram.event - INFO - Update id=521452627 is handled. Duration 244 ms by bot id=8729090210
+2026-07-06 18:52:58,818 - app.handlers.user_handlers - INFO - Пользователь 1547682916 выбрал ID категории: 1
+2026-07-06 18:52:59,114 - aiogram.event - INFO - Update id=521452628 is handled. Duration 296 ms by bot id=8729090210
