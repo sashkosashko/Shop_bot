@@ -30,8 +30,15 @@ selected_item = InlineKeyboardMarkup(inline_keyboard=[
     [to_main]])
 
 feedbacks = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="Отзыв по работе бота", url="https://forms.yandex.ru/u/69fa2c339029021219d08c28")], 
+    [InlineKeyboardButton(text="Отзыв по работе бота🛠", url="https://forms.yandex.ru/u/69fa2c339029021219d08c28")], 
 
-    [InlineKeyboardButton(text="Отзыв по обслуживанию", url="https://forms.yandex.ru/u/69fa2c339029021219d08c28")],
+    [InlineKeyboardButton(text="Отзыв по обслуживанию💌", url="https://forms.yandex.ru/u/69fa2c339029021219d08c28")],
     
     [to_main]])
+
+buying_item = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="Вернуться к карточке товара↩", callback_data="plus_amount")],
+
+    [InlineKeyboardButton(text="Списать накопленные баллы🎫", callback_data="minus_amount")],
+
+    [InlineKeyboardButton(text="Оплатить🎁", callback_data="buy_item")]])

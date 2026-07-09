@@ -7,7 +7,7 @@ from database.items import Item
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import InlineKeyboardButton
 
-from app.keyboards import to_main, to_categories
+from app.keyboards.inlines import to_main, to_categories
 
 async def inline_categories():
     session = db_session.create_session()
