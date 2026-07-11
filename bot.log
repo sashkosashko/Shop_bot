@@ -121,3 +121,54 @@ AttributeError: 'coroutine' object has no attribute 'name'
 2026-07-09 20:06:17,517 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
 2026-07-09 20:06:17,518 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
 2026-07-09 20:06:17,844 - aiogram.event - INFO - Update id=521452655 is handled. Duration 326 ms by bot id=8729090210
+2026-07-09 20:07:16,297 - aiogram.dispatcher - INFO - Start polling
+2026-07-09 20:07:16,367 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-09 20:07:25,003 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-09 20:07:25,010 - app.handlers.user_handlers - INFO - Новый пользователь 1547682916 зарегистрирован в БД
+2026-07-09 20:07:25,500 - aiogram.event - INFO - Update id=521452656 is handled. Duration 497 ms by bot id=8729090210
+2026-07-09 20:07:28,998 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запросил профиль
+2026-07-09 20:07:29,258 - aiogram.event - INFO - Update id=521452657 is handled. Duration 260 ms by bot id=8729090210
+2026-07-09 20:07:37,121 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-09 20:07:37,389 - aiogram.event - INFO - Update id=521452658 is handled. Duration 268 ms by bot id=8729090210
+2026-07-11 19:12:25,483 - aiogram.dispatcher - INFO - Start polling
+2026-07-11 19:12:25,554 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-11 19:12:31,298 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-11 19:12:31,308 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-11 19:12:31,697 - aiogram.event - INFO - Update id=521452659 is handled. Duration 398 ms by bot id=8729090210
+2026-07-11 19:12:33,780 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запросил профиль
+2026-07-11 19:12:34,052 - aiogram.event - INFO - Update id=521452660 is handled. Duration 272 ms by bot id=8729090210
+2026-07-11 19:12:39,579 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-11 19:12:39,830 - aiogram.event - INFO - Update id=521452661 is handled. Duration 251 ms by bot id=8729090210
+2026-07-11 19:12:44,283 - app.handlers.user_handlers - INFO - Пользователь 1547682916 нажал кнопку отзывов
+2026-07-11 19:12:44,577 - aiogram.event - INFO - Update id=521452662 is handled. Duration 294 ms by bot id=8729090210
+2026-07-11 19:12:46,208 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-11 19:12:46,459 - aiogram.event - INFO - Update id=521452663 is handled. Duration 251 ms by bot id=8729090210
+2026-07-11 19:12:48,363 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-11 19:12:48,605 - aiogram.event - INFO - Update id=521452664 is handled. Duration 242 ms by bot id=8729090210
+2026-07-11 19:45:55,145 - aiogram.dispatcher - INFO - Start polling
+2026-07-11 19:45:55,219 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-11 19:45:58,957 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-11 19:45:58,958 - app.handlers.user_handlers - ERROR - Критическая ошибка в хэндлере start для пользователя 1547682916: База данных не инициализирована. Вызовите global_init снаружи.
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\shop_bot\venv\app\handlers\user_handlers.py", line 30, in start
+    user = await rq.return_user(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\app\requests.py", line 35, in return_user
+    async with db_session.create_session() as session:
+               ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\database\db_session.py", line 33, in create_session
+    raise Exception("База данных не инициализирована. Вызовите global_init снаружи.")
+Exception: База данных не инициализирована. Вызовите global_init снаружи.
+2026-07-11 19:45:59,311 - aiogram.event - INFO - Update id=521452666 is handled. Duration 354 ms by bot id=8729090210
+2026-07-11 19:47:05,167 - aiogram.dispatcher - INFO - Start polling
+2026-07-11 19:47:05,236 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-11 19:47:06,907 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-11 19:47:06,912 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-11 19:47:07,247 - aiogram.event - INFO - Update id=521452667 is handled. Duration 345 ms by bot id=8729090210
+2026-07-11 19:47:14,184 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-11 19:47:14,187 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-11 19:47:14,503 - aiogram.event - INFO - Update id=521452668 is handled. Duration 318 ms by bot id=8729090210
+2026-07-11 19:47:15,728 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-11 19:47:15,990 - aiogram.event - INFO - Update id=521452669 is handled. Duration 263 ms by bot id=8729090210
+2026-07-11 19:47:31,406 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-11 19:47:31,672 - aiogram.event - INFO - Update id=521452670 is handled. Duration 266 ms by bot id=8729090210
