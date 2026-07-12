@@ -1,14 +1,8 @@
-from database import db_session
-from database.users import User
-from database.orders import Order
-from database.categories import Category
-from database.items import Item
-
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import InlineKeyboardButton
 
-from app.keyboards.inlines import to_main, to_categories
-import app.requests as rq
+from app.keyboards.user_inlines import to_main, to_categories
+import database.requests as rq
 
 async def inline_categories():
     categories = InlineKeyboardBuilder()

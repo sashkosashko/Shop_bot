@@ -1,4 +1,3 @@
-import sqlalchemy as sa
 import sqlalchemy.orm as orm
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 
@@ -20,8 +19,6 @@ async def global_init(db_file: str):
     engine = create_async_engine(conn_str, echo=False)
     
     __factory = async_sessionmaker(bind=engine, expire_on_commit=False)
-
-    from . import __all_models
 
     async with engine.begin() as conn:
         await conn.run_sync(SqlAlchemyBase.metadata.create_all)

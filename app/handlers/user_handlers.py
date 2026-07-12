@@ -5,10 +5,10 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, FSInputFile, Message
 
-import app.keyboards.builders as br
-import app.keyboards.inlines as il
+import app.keyboards.user_builders as br
+import app.keyboards.user_inlines as il
 
-import app.requests as rq
+import database.requests as rq
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ async def start(message: Message, state: FSMContext):
             except Exception as e:
                 logger.warning("Не удалось удалить сообщение пользователя %s: %s", user_id, e)
 
-            photo = FSInputFile("venv/images_dir/start.png")
+            photo = FSInputFile("images_dir/start.png")
             await message.answer_photo(
                 photo=photo,
                 caption="Привет, пользователь! Ты попал в наш магазинчик {название} впервые. {желаемое описание}",
@@ -49,7 +49,7 @@ async def start(message: Message, state: FSMContext):
             except Exception as e:
                 logger.warning("Не удалось удалить сообщение пользователя %s: %s", user_id, e)
 
-            photo = FSInputFile("venv/images_dir/start.png")
+            photo = FSInputFile("images_dir/start.png")
             await message.answer_photo(
                 photo=photo,
                 caption="Ого, вы вернулись! Добро пожаловать в магазин {название}",
@@ -222,7 +222,7 @@ async def selected_item(callback: CallbackQuery, state: FSMContext):
         item_name = item.name
         item_price = item.price
 
-        text = f"Вы выбрали:\nКатегория: {category_name}\nТовар: {item_name}\nСтоимость: {item_price}₽\nКоличество: {item_amount}"
+        text = f"Вы выбрали:\nКатегория: {category_name}\nТовар: {item_name}\nСтоимость: {item_price * item_amount}₽\nКоличество: {item_amount}"
 
         if callback.message.photo:
             try:
@@ -272,7 +272,8 @@ async def change_amount(callback: CallbackQuery, state: FSMContext):
 
 @user_router.callback_query(F.data == "buy")
 async def buying_item(callback: CallbackQuery, state: FSMContext):
-    user_id = callback.from_user.id
-    item_data = await state.get_data()
+    pass
+    #user_id = callback.from_user.id
+    #item_data = await state.get_data()
 
 

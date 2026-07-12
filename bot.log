@@ -172,3 +172,124 @@ Exception: База данных не инициализирована. Вызо
 2026-07-11 19:47:15,990 - aiogram.event - INFO - Update id=521452669 is handled. Duration 263 ms by bot id=8729090210
 2026-07-11 19:47:31,406 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
 2026-07-11 19:47:31,672 - aiogram.event - INFO - Update id=521452670 is handled. Duration 266 ms by bot id=8729090210
+2026-07-12 19:15:59,274 - aiogram.dispatcher - INFO - Start polling
+2026-07-12 19:15:59,346 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-12 19:16:10,976 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-12 19:16:11,838 - aiogram.event - INFO - Update id=521452671 is handled. Duration 863 ms by bot id=8729090210
+2026-07-12 19:16:14,281 - app.handlers.user_handlers - INFO - Пользователь 1547682916 перешел в главное меню
+2026-07-12 19:16:14,362 - app.handlers.user_handlers - ERROR - Ошибка отображения меню с фото для 1547682916: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot8729090210:AAGIATvIFC92Tkuzveai9QZRhYxHifIiDKc/sendPhoto. Пробуем текст.
+2026-07-12 19:16:14,682 - aiogram.event - INFO - Update id=521452672 is handled. Duration 401 ms by bot id=8729090210
+2026-07-12 19:43:05,173 - aiogram.dispatcher - INFO - Start polling
+2026-07-12 19:43:05,246 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-12 19:43:10,333 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-12 19:43:10,343 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-12 19:43:10,635 - app.handlers.user_handlers - ERROR - Критическая ошибка в хэндлере start для пользователя 1547682916: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot8729090210:AAGIATvIFC92Tkuzveai9QZRhYxHifIiDKc/sendPhoto
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 1397, in write_bytes
+    await self._body.write_with_length(writer, content_length)
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\payload.py", line 296, in write_with_length
+    await self.write(writer)
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\multipart.py", line 1140, in write
+    await part.write(writer)
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\payload.py", line 1030, in write
+    await self.write_with_length(writer, None)
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\payload.py", line 1072, in write_with_length
+    chunk = await anext(self._iter)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\types\input_file.py", line 104, in read
+    async with aiofiles.open(self.path, "rb") as f:
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiofiles\base.py", line 73, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiofiles\base.py", line 69, in __await__
+    self._obj = yield from self._coro.__await__()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiofiles\threadpool\__init__.py", line 93, in _open
+    f = await loop.run_in_executor(executor, cb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+FileNotFoundError: [Errno 2] No such file or directory: 'venv/images_dir/start.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 167, in make_request
+    async with session.post(
+               ~~~~~~~~~~~~^
+        url,
+        ^^^^
+        data=form,
+        ^^^^^^^^^^
+        timeout=self.timeout if timeout is None else timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as resp:
+    ^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\client.py", line 1683, in __aenter__
+    self._resp: _RetType_co = await self._coro
+                              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\client.py", line 856, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\client.py", line 834, in _connect_and_send_request
+    await resp.start(conn)
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\client_reqrep.py", line 558, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiohttp\streams.py", line 705, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot8729090210:AAGIATvIFC92Tkuzveai9QZRhYxHifIiDKc/sendPhoto
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\shop_bot\app\handlers\user_handlers.py", line 53, in start
+    await message.answer_photo(
+    ...<3 lines>...
+    )
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\client\bot.py", line 509, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 176, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}") from e
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 2] Can not write request body for https://api.telegram.org/bot8729090210:AAGIATvIFC92Tkuzveai9QZRhYxHifIiDKc/sendPhoto
+2026-07-12 19:43:10,890 - aiogram.event - INFO - Update id=521452674 is handled. Duration 556 ms by bot id=8729090210
+2026-07-12 19:43:57,151 - aiogram.dispatcher - INFO - Start polling
+2026-07-12 19:43:57,222 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-12 19:44:00,396 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-12 19:44:00,400 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-12 19:44:00,801 - aiogram.event - INFO - Update id=521452675 is handled. Duration 404 ms by bot id=8729090210
+2026-07-12 19:44:12,886 - aiogram.event - INFO - Update id=521452676 is not handled. Duration 0 ms by bot id=8729090210
+2026-07-12 19:54:42,052 - aiogram.dispatcher - INFO - Start polling
+2026-07-12 19:54:42,122 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-12 19:54:45,425 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-12 19:54:45,429 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-12 19:54:45,816 - aiogram.event - INFO - Update id=521452678 is handled. Duration 390 ms by bot id=8729090210
+2026-07-12 19:54:54,059 - aiogram.event - INFO - Update id=521452679 is not handled. Duration 0 ms by bot id=8729090210
+2026-07-12 19:55:43,644 - aiogram.event - INFO - Update id=521452680 is not handled. Duration 0 ms by bot id=8729090210
+2026-07-12 19:57:24,548 - aiogram.dispatcher - INFO - Start polling
+2026-07-12 19:57:24,616 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-12 19:57:26,980 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-12 19:57:26,984 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-12 19:57:27,388 - aiogram.event - INFO - Update id=521452681 is handled. Duration 408 ms by bot id=8729090210
+2026-07-12 19:57:33,824 - aiogram.event - INFO - Update id=521452682 is not handled. Duration 0 ms by bot id=8729090210
+2026-07-12 19:57:40,251 - aiogram.event - INFO - Update id=521452683 is not handled. Duration 0 ms by bot id=8729090210
+2026-07-12 19:59:02,188 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramUnauthorizedError: Telegram server says - Unauthorized
+2026-07-12 19:59:02,188 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8729090210)
+2026-07-12 19:59:04,841 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramUnauthorizedError: Telegram server says - Unauthorized
+2026-07-12 19:59:04,841 - aiogram.dispatcher - WARNING - Sleep for 1.415139 seconds and try again... (tryings = 1, bot id = 8729090210)
+2026-07-12 19:59:06,333 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramUnauthorizedError: Telegram server says - Unauthorized
+2026-07-12 19:59:06,333 - aiogram.dispatcher - WARNING - Sleep for 1.846501 seconds and try again... (tryings = 2, bot id = 8729090210)
+2026-07-12 19:59:08,248 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramUnauthorizedError: Telegram server says - Unauthorized
+2026-07-12 19:59:08,249 - aiogram.dispatcher - WARNING - Sleep for 2.245851 seconds and try again... (tryings = 3, bot id = 8729090210)
+2026-07-12 19:59:10,578 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramUnauthorizedError: Telegram server says - Unauthorized
+2026-07-12 19:59:10,578 - aiogram.dispatcher - WARNING - Sleep for 3.023157 seconds and try again... (tryings = 4, bot id = 8729090210)
+2026-07-12 19:59:13,667 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramUnauthorizedError: Telegram server says - Unauthorized
+2026-07-12 19:59:13,667 - aiogram.dispatcher - WARNING - Sleep for 3.941311 seconds and try again... (tryings = 5, bot id = 8729090210)
