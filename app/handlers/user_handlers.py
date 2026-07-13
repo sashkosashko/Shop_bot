@@ -4,6 +4,7 @@ from aiogram.filters import CommandStart
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, FSInputFile, Message
+from filters.chat_types import IsAdmin
 
 import app.keyboards.user_builders as br
 import app.keyboards.user_inlines as il
@@ -13,6 +14,8 @@ import database.requests as rq
 logger = logging.getLogger(__name__)
 
 user_router = Router()
+user_router.message.filter(~IsAdmin())
+user_router.callback_query.filter(~IsAdmin())
 
 
 class OrderStates(StatesGroup):

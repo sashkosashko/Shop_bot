@@ -293,3 +293,99 @@ aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientOSError: [Errn
 2026-07-12 19:59:10,578 - aiogram.dispatcher - WARNING - Sleep for 3.023157 seconds and try again... (tryings = 4, bot id = 8729090210)
 2026-07-12 19:59:13,667 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramUnauthorizedError: Telegram server says - Unauthorized
 2026-07-12 19:59:13,667 - aiogram.dispatcher - WARNING - Sleep for 3.941311 seconds and try again... (tryings = 5, bot id = 8729090210)
+2026-07-12 19:59:47,316 - aiogram.dispatcher - INFO - Start polling
+2026-07-12 19:59:47,387 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-12 19:59:55,352 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-12 19:59:55,358 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-12 19:59:55,833 - aiogram.event - INFO - Update id=521452684 is handled. Duration 482 ms by bot id=8729090210
+2026-07-12 19:59:58,780 - aiogram.event - INFO - Update id=521452685 is handled. Duration 101 ms by bot id=8729090210
+2026-07-13 19:18:19,192 - aiogram.dispatcher - INFO - Start polling
+2026-07-13 19:18:19,280 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-13 19:18:24,773 - aiogram.event - INFO - Update id=521452687 is not handled. Duration 0 ms by bot id=8729090210
+2026-07-13 19:18:24,773 - aiogram.event - ERROR - Cause exception while process update id=521452687 by bot id=8729090210
+AttributeError: module 'app.keyboards.admin_inlines' has no attribute 'admin_menu'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 193, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 165, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 157, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 185, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\shop_bot\app\handlers\admin_handlers.py", line 22, in admin_menu
+    await message.answer("Вы вошли как админ. Что хотите сделать?", reply_markup=il.admin_menu)
+                                                                                 ^^^^^^^^^^^^^
+AttributeError: module 'app.keyboards.admin_inlines' has no attribute 'admin_menu'
+2026-07-13 19:19:08,717 - aiogram.dispatcher - INFO - Start polling
+2026-07-13 19:19:08,785 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-13 19:19:14,440 - aiogram.event - INFO - Update id=521452688 is handled. Duration 229 ms by bot id=8729090210
+2026-07-13 19:19:38,686 - aiogram.event - INFO - Update id=521452689 is not handled. Duration 1 ms by bot id=8729090210
+2026-07-13 19:19:40,332 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-13 19:19:40,673 - aiogram.event - INFO - Update id=521452690 is handled. Duration 341 ms by bot id=8729090210
+2026-07-13 19:26:49,698 - aiogram.dispatcher - INFO - Start polling
+2026-07-13 19:26:49,772 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-13 19:26:59,468 - aiogram.event - INFO - Update id=521452691 is handled. Duration 244 ms by bot id=8729090210
+2026-07-13 19:27:00,666 - aiogram.event - INFO - Update id=521452692 is not handled. Duration 1 ms by bot id=8729090210
+2026-07-13 19:27:01,395 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-13 19:27:01,945 - aiogram.event - INFO - Update id=521452693 is handled. Duration 550 ms by bot id=8729090210
+2026-07-13 19:31:53,704 - aiogram.dispatcher - INFO - Start polling
+2026-07-13 19:31:53,776 - aiogram.dispatcher - INFO - Run polling for bot @shop_ex_bot id=8729090210 - 'Shop_Example'
+2026-07-13 19:32:05,467 - aiogram.event - INFO - Update id=521452694 is handled. Duration 231 ms by bot id=8729090210
+2026-07-13 19:32:06,615 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-13 19:32:07,120 - aiogram.event - INFO - Update id=521452695 is handled. Duration 505 ms by bot id=8729090210
+2026-07-13 19:35:01,935 - app.handlers.user_handlers - INFO - Пользователь 1547682916 запустил бота (/start)
+2026-07-13 19:35:01,939 - app.handlers.user_handlers - INFO - Вернувшийся пользователь 1547682916 вошел в систему
+2026-07-13 19:35:02,136 - aiogram.event - INFO - Update id=521452696 is handled. Duration 201 ms by bot id=8729090210
+2026-07-13 19:35:21,207 - aiogram.event - INFO - Update id=521452697 is handled. Duration 123 ms by bot id=8729090210
+2026-07-13 19:35:23,585 - app.handlers.user_handlers - INFO - Пользователь 1547682916 открыл каталог категорий
+2026-07-13 19:35:24,047 - aiogram.event - INFO - Update id=521452698 is handled. Duration 462 ms by bot id=8729090210
